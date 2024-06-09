@@ -31,6 +31,7 @@ class ClientPrefs {
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = #if android true #else false #end;
 	public static var hitsoundVolume:Float = 0;
+	public static var virtualPadAlpha:Float = 0.6;
 	public static var pauseMusic:String = 'Tea Time';
 	public static var checkForUpdates:Bool = true;
 	public static var comboStacking = true;
@@ -113,6 +114,7 @@ class ClientPrefs {
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
+		FlxG.save.data.virtualPadAlpha = virtualPadAlpha;
 		FlxG.save.data.vibration = vibration;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.timeBarType = timeBarType;
@@ -209,6 +211,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.vibration != null) {
 			vibration = FlxG.save.data.vibration;
+		}
+		if(FlxG.save.data.virtualPadAlpha != null) {
+			virtualPadAlpha = FlxG.save.data.virtualPadAlpha;
 		}
 		if(FlxG.save.data.ghostTapping != null) {
 			ghostTapping = FlxG.save.data.ghostTapping;
